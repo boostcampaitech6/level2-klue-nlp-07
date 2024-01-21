@@ -1,0 +1,11 @@
+# misc
+.DS_Store
+
+# 캐시, 모델 및 기타 로그 폴더 제외
+/__pycache__/*
+/best_model/*
+/config/*
+/prediction/*
+/results/*
+/wandb/*
+/logs/*
