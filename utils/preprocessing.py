@@ -40,7 +40,7 @@ def processing_special_punct_kr_tokens(dataset) :
   sentences = []
   subject_entity = []
   object_entity = []
-  type_mapping = {'PER': '사람', 'ORG': '기관', 'DAT': '날짜', 'LOC': '위치', 'POH': '기타', 'NOH': '수량'}
+  type_mapping = {'PER': '사람', 'ORG': '조직', 'DAT': '날짜', 'LOC': '위치', 'POH': '기타', 'NOH': '수량'}
 
   for data in dataset:
         sentence = data['sentence']
@@ -147,7 +147,7 @@ def preprocessing_dataset(dataset, preprocessing_mode) :
 # style: add semantic typing
 def semantic_typing(dataset, punct_mode, sentence_mode) :
   print(f"punct_mode: {punct_mode}, sentence_mode: {sentence_mode}")
-  type_mapping = {'PER': '사람', 'ORG': '기관', 'DAT': '날짜', 'LOC': '위치', 'POH': '기타', 'NOH': '수량'}
+  type_mapping = {'PER': '사람', 'ORG': '조직', 'DAT': '날짜', 'LOC': '위치', 'POH': '기타', 'NOH': '수량'}
   semantic_sentence = []
   
   if punct_mode == 'punct_kr' :
