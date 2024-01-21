@@ -19,7 +19,7 @@ from utils.special_tokens import special_tokens
 ts = datetime.datetime.now().strftime("%m%d%H%M%S")
 os.environ["WANDB_PROJECT"] = "LV2-RE"  # name your W&B project
 os.environ["WANDB_LOG_MODEL"] = "checkpoint"  # log all model checkpoints
-exp_theme = "weighted-ce-loss"
+exp_theme = config.exp_theme
 wandb_name = f"{config.model_name[:14]}-{exp_theme}-lr{config.learning_rate}-{config.max_epoch}e"
 
 # Custom loss function class
@@ -182,7 +182,7 @@ def train():
   # train model
   trainer.train()
   model.save_pretrained('./best_model')
-  
+
 def main():
   train()
 

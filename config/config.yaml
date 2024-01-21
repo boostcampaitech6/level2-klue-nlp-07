@@ -10,3 +10,4 @@ test_path: ./dataset/test/test_data.csv
 weight_decay: 0.01
 # warm_up_ratio: 0.1
 loss_func: FL
+exp_theme: "focal-loss"
